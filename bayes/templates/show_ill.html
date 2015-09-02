@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/networks.css">
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  
+  <body>
+    <header>
+      <div class="nav">
+        <ul>
+          <li class="home"><a href="/">Home</a></li>
+          <li class="network"><a href="net">Network</a></li>
+          <li class="illness"><a class="active" href="ill">Illness</a></li>
+          <li class="ideology"><a href="ideo">Ideology</a></li>
+          <li class="ideology"><a href="#">Inference</a>
+            <ul>
+              <li><a href="bayes/net">Network</a></li>
+              <li><a href="bayes/ill">Illness</a></li>
+              <li><a href="bayes/ideo">Ideology</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </body>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="static/js/render_network.js"></script>
+  <script type="text/javascript">
+	var url = "http://127.0.0.1:5000/networks/ill.json"
+	d3.json(url, render_network);
+  </script>
+
+  <form>
+    <input id="update" type="submit" value="Submit" action="{{ url_for('ill_graph') }}" method='post'>
+    <input id="original" type="submit" value="Restore" action="{{ url_for('original_ill_graph') }}" method='post'>
+  </form>
+
+</html>

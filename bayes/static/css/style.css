@@ -1,0 +1,112 @@
+body            { font-family: sans-serif; background: #E1DEE3; margin: 0; padding: 0;}
+ 
+h1 { color: #377ba8; padding-left: 10px}
+
+.header td { color: #377ba8; font-weight: bold;}
+
+form {padding-left: 10px}
+
+td {padding-right: 10px; font-family: sans-serif}
+
+.legend {
+  position: absolute;
+  right: 0px;
+}
+
+#bayes {
+  min-width: 1000px;
+}
+
+.selector {
+  width: 100px;
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #726E97;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: sans-serif;
+  font-size: 1em;
+  height: 30px;
+  width: 100px;
+  border-bottom: none;
+  display: inline-block;
+  margin-right: 55px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-left: 15px;
+  border-bottom: 1px solid #888;
+  transition: .3s background-color;
+}
+
+.nav a:hover {
+  background-color: #724F8A;
+}
+
+.nav a.active {
+  background-color: #724F8A;
+  color: #fff;
+  cursor: default;
+}
+
+.nav li li {
+  font-size: .8em;
+}
+
+/*******************************************
+   Style menu for larger screens
+   Using 650px (130px each * 5 items)
+********************************************/
+
+@media screen and (min-width: 650px) {
+  .nav li {
+    width: 100px;
+    border-bottom: none;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1em;
+    display: inline-block;
+    margin-right: -4px;
+    margin-right: 55px;
+    text-align: left;
+  }
+
+  .nav a {
+    border-bottom: none;
+  }
+
+  .nav > ul > li {
+    text-align: center;
+  }
+
+  .nav > ul > li > a {
+    padding-left: 0;
+  }
+
+  /* Sub Menus */
+  .nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+  .nav li:hover ul {
+    display: block;
+  }
+
+  .nav li ul li {
+    display: block;
+  }
+}
+
